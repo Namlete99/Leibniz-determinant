@@ -1,0 +1,196 @@
+@font-face {
+	font-family: 'Computer Modern Serif';
+	src: url('cmunrm.eot');
+	src: url('cmunrm.eot?#iefix') format('embedded-opentype'),
+		 url('cmunrm.woff') format('woff'),
+		 url('cmunrm.ttf') format('truetype'),
+		 url('cmunrm.svg#cmunrm') format('svg');
+	font-style: normal;
+}
+
+/* Tiêu đề LaTeX */
+
+.LatexTitle{ 
+    font-size: 40px;
+    padding-top: 0vh;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.LatexName{
+    font-size: 27px;
+    text-align: center;
+    margin-bottom: 13px;
+}
+.LatexDate{
+    font-size: 27px;
+    text-align: center;
+    margin-top: 13px;
+    margin-bottom: 45px;
+}
+
+.LatexAbstract{
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.LatexAbstractText{
+    margin-top:10px;
+    font-size: 21px;
+    text-align: center;
+    text-align: justify;
+    text-indent: 20px
+}
+
+.Margins{
+    padding-left: 10%;
+    width: 80%;
+}
+
+.AbstractMargins{
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 90%;
+    padding-bottom: 15px;
+}
+
+/* Phân mục  */
+.Section{
+    font-weight:900;
+    font-size: 33px;
+    text-align: Left;
+    margin-top: 13px;
+    margin-bottom: 20px;
+}
+
+
+.SubSection{
+    font-weight:800;
+    font-size: 29px;
+    text-align: Left;
+    margin-top: 13px;
+    margin-bottom: 20px;
+}
+
+/* Văn bản */
+
+.BodyText{
+    font-size: 23px;
+    margin-top: 0px;
+    text-align: justify;
+    margin-bottom: 15px;
+    line-height: 125%;
+    column-count: 1;
+}
+
+/* Link */
+a {
+    text-decoration: none;
+    color:rgb(50, 78, 192); 
+    font-size: 23px;
+    cursor: pointer;
+}
+
+/* Chèn ảnh */
+img {
+  margin: 0 auto;
+  max-width: 80%;
+  max-height: 80%;
+  text-align: center;
+  display: block;
+}
+
+
+figcaption {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Danh sách */
+
+li {
+    font-size: 23px;
+    margin-top: 0px;
+    text-align: justify;
+    margin-bottom: 5px;
+}
+
+/* Mathjax */
+
+.MathJax {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+
+/* Chia đoạn */
+
+hr{
+    border: 1px solid black;
+    width: 100%;
+}
+
+/* Footnote */
+
+.Footnote{
+    padding-top: 15px;
+    margin-bottom: 20px;
+}
+
+ol li{
+    margin-bottom: 10px;
+    font-size: 23px;
+}
+
+/* footer */
+
+footer{
+    padding-top: 1vh;
+}
+.footerNav{
+    margin: 20px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color:#111;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1em;
+    opacity: 0.6;
+    transition: 0.5s;
+}
+.footerNav ul li a:hover{
+    opacity: 3;
+    color:rgb(50, 78, 192); 
+}
+.footerBottom{
+    padding: 1vh;
+    text-align: center;
+}
+.footerBottom p{
+    font-size: 16px;
+    color:#111;
+}
+.designer{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+@media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    } 
+    .footerNav ul li{
+        width:100%;
+        text-align: center;
+        margin: 10px;
+    }
+}
