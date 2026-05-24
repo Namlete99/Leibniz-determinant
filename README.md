@@ -1,6 +1,6 @@
-Bản chỉnh sửa này tập trung vào việc soạn lại dự án mẫu (Example LaTeX) của LaTeX thành web. Bên cạnh đó là mở rộng một số tính năng khác của LaTeX cơ bản vào web như footnote, footer, ..vv.. cũng được thực hiện trong bản chỉnh sửa này.
+Bản chỉnh sửa này tập trung vào việc mở rộng một số tính năng cơ bản khác của LaTeX vào web gốc của tác giả [Hamish Sams](https://github.com/Hammie217) bao gồm các vấn đề như chèn ảnh, chèn bảng, viết phương trình toán học dài, footnote, footer, ..vv..
 
-Cảm ơn các nguồn tham khảo tuyệt vời sau đây đã giúp mình chỉnh sửa dự án này: 
+Trong lúc làm việc với dự án nhỏ này, vô cùng cảm ơn các nguồn tham khảo tuyệt vời sau đây đã giúp mình chỉnh sửa dự án này: 
 
 \[1] https://discuss.write.as/t/put-footnotes-in-blog-posts/762/20 
 
