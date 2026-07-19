@@ -95,17 +95,33 @@ body{
 /* Định nghĩa (definition) */
 
 .definition{
-display: block;
-font-style:normal;
+    font-size: 23px;    
+    display: block;
+    font-style:normal;
 }
 .definition:before {
-content: "Định nghĩa "attr(number)".";
-font-weight: bold;
-font-style: normal;
+    content: "Định nghĩa "attr(number)".";
+    font-weight: bold;
+    font-style: normal;
 }
 .definition[text]:before {
-content: "Định nghĩa "attr(number)" (" attr(text) "). ";
+    content: "Định nghĩa "attr(number)" (" attr(text) "). ";
 }
+
+
+/* Ví dụ (example) */
+
+.example{
+    font-size: 23px;    
+    display: block;
+    font-style:normal;
+}
+.example:before {
+    content: "Ví dụ "attr(number)".";
+    font-weight: bold;
+    font-style: normal;
+}
+
 
 
 /* Link */

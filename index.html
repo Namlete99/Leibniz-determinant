@@ -3,20 +3,157 @@ layout: default
 title: Định thức của Leibniz
 author: Nguyen Le Nam 
 date: July 19, 2026
-abstract: Viết sơ lược trình bày cách hiểu cơ bản cách tính định thức của nhà toán học Leibniz
+abstract: Viết sơ lược trình bày cách hiểu cơ bản cách tính định thức của nhà toán học Leibniz.
 ---
-<!-- Phép thế và dấu của phép thế -->
-<p class="Section">1 &ensp; Phép thế và dấu của phép thế</p>
-<p class="BodyText">
-    <div class="definition" text='phép thế' number="1.1">
-        &ensp; Cho tập \(X = \{1, 2, \dots , n\}\), với \(n \in \mathbb{N^*}\). Mỗi song ánh từ tập \(X\) vào chính nó được gọi là một phép thế
-        cấp \(n\). 
-    </div>
-</p>
-<p class="BodyText">
-    Một phép thế cấp $n$ còn được gọi là một phép thế bậc $n$ hoặc là một hoán vị cấp \(n\). 
-</p>
+    <!-- Phép thế và dấu của phép thế -->
+    <p class="Section">1 &ensp; Phép thế và dấu của phép thế</p>
+    <p class="BodyText">
+        <div class="definition" text='phép thế' number="1.1">
+            &ensp; Cho tập \(X = \{1, 2, \dots , n\}\), với \(n \in \mathbb{N^*}\). Mỗi song ánh từ tập \(X\) vào chính nó được gọi là một phép thế
+            cấp \(n\). 
+        </div>
+    </p>
+    <p class="BodyText">
+        Một phép thế cấp \(n\) còn được gọi là một phép thế bậc $n$ hoặc là một hoán vị cấp \(n\). 
+    </p>
+    <p class="BodyText">
+        Phép thế được kí hiệu bởi chữ cái Hy Lạp: \(\sigma\) hoặc \(\tau\). 
+    </p>    
+    <p class="BodyText">
+        Tập hợp các phép thế cấp $n$ được kí hiệu là \(S_n\). 
+    </p>
+    <p class="BodyText">
+        Số các phép thế cấp \(n\) là \(n!\). 
+    </p>
 
+    <p class="BodyText">
+        Một phép thế \(\sigma\) cấp \(n\) được biểu diễn dưới dạng một bảng gồm hai dòng: 
+        $$
+        \sigma = \begin{pmatrix}
+            1 & 2 & \dots & n \\
+            \sigma(1) & \sigma(2) & \dots & \sigma(n)
+        \end{pmatrix}
+        $$
+    </p>
+    <p class="BodyText">
+        <div class="example" number="1.2">
+            &ensp; Cho một ma trận vuông cấp 2 sau:
+        </div>
+    </p>
+    <p class="BodyText">
+        $$
+        \begin{bmatrix}
+            1 & 2 \\
+            3 & 4 
+        \end{bmatrix}
+        $$
+    </p>
+    <p class="BodyText">
+        Ma trận vuông cấp 2 này có \(2! = 2\) phép thế cấp 2, được biểu diễn dưới dạng một bảng gồm hai dòng, đó là: 
+        $$
+        \sigma_1 = \begin{pmatrix}
+            1 & 2 \\
+            1 & 2
+        \end{pmatrix}
+        , 
+        \sigma_2 = \begin{pmatrix}
+            1 & 2 \\
+            2 & 1
+        \end{pmatrix}
+        $$
+    </p>
+    <p class="BodyText">
+        Từ đó ta có tập hợp các phép thế cấp 2: 
+        $$S_2 = \left \{\begin{pmatrix}
+            1 & 2 \\
+            1 & 2
+        \end{pmatrix}
+        , 
+        \begin{pmatrix}
+            1 & 2 \\
+            2 & 1
+        \end{pmatrix} \right \}$$
+    </p>
+    <p class="BodyText">
+        <div class="definition" text='dấu phép thế' number="1.3" id="#difi:1.3">
+            &ensp; Cho \(\sigma \in S_n\). Dấu của phép thế \(\sigma\), kí hiệu là \(sgn(\sigma)\), được xác định bởi: 
+        </div>
+        \begin{equation}
+            sgn(\sigma) = \prod_{1 \leq i < j \leq n} \left(\frac{\sigma(j) - \sigma(i)}{j - i} \right) \in \{\pm 1\} 
+            \label{eq:1}
+        \end{equation}
+    </p>
+    <p class="BodyText">
+        Phép thế \(\sigma\) được gọi là phép thế <b>chẵn</b> nếu \(sgn(\sigma) = 1\). Nếu \(sgn(\sigma) = -1\) thì phép thế \(\sigma\) 
+        được gọi là phép thế <b>lẻ</b>.
+    </p>
+    <p class="BodyText">
+        <div class="example" number="1.4" id="#ex:1.4">
+            &ensp; Cho một phép thế cấp 6 sau: 
+            $$
+            \sigma_6 = \begin{pmatrix}
+                1 & 2 & 3 & 4 & 5 & 6 \\
+                5 & 1 & 4 & 2 & 3 & 6
+            \end{pmatrix}
+            $$
+        </div>
+    </p>
+    <p class="BodyText">
+        Xác định phép thế này là phép thế chẵn hay phép thế lẻ ? 
+    </p>
+    <p class="BodyText">
+       Bằng cách áp dụng công thức \eqref{eq:1} ta được: 
+       \begin{equation*}
+            \begin{aligned}
+            \operatorname{sgn}(\sigma_6) &= \prod_{1 \leqslant i < j \leqslant 6} \left (\frac{\sigma(j) - \sigma(i)}{j - i} \right) \\
+            &= \left ( \frac{1-5}{2-1} \cdot \frac{4-5}{3-1} \cdot \frac{2-5}{4-1} \cdot \frac{3-5}{5-1} \cdot \frac{6-5}{6-1}) \cdot ( \frac{4-1}{3-2} \cdot \frac{2-1}{4-2} \cdot \frac{3-1}{5-2} \cdot \frac{6-1}{6-2}) \cdot ( \frac{2-4}{4-3} \cdot \frac{3-4}{5-3} \cdot \frac{6-4}{6-3} ) \cdot ( \frac{3-2}{5-4} \cdot \frac{6-2}{6-4} ) \cdot ( \frac{6-3}{6-5} \right) \\
+            &= 1
+            \end{aligned}    
+        \end{equation*}
+    </p>
+    <p class="BodyText">
+        Vì \(sgn(\sigma_{6}) = 1\), nên phép thế \(\sigma_{6}\) là phép thế chẵn. 
+    </p>
+    <p class="BodyText">
+        Từ <a href="#defi:1.3"><b>định nghĩa 1.3</b></a> về dấu của phép thế trên, ta có một cách khác để tính dấu của phép thế. Nhưng trước tiên ta cần tìm hiểu định 
+        nghĩa về nghịch thế.
+    </p>
+    <p class="BodyText">
+        <div class="definition" text='dấu phép thế' number="1.5" id="#difi:1.5">
+            &ensp; Cho \(f: X \to X\) là phép thế cấp \(n\), với \(X = \{1, 2, \dots, n\}\):  
+        <ol>
+            <li>Cặp \((\sigma(i), \sigma(j)\)), với \(1 \leq i < j \leq n\) được gọi là <b>nghịch thế</b> nếu \(\sigma(i) > \sigma(j)\)</li>
+            <li>Nếu cặp \((\sigma(i), \sigma(j)\)) có số lượng nghịch thế là <b>chẵn</b>, thì phép thế \(\sigma\) được gọi là phép thế chẵn và ta có được dấu phép 
+                thế \(sgn(\sigma) = 1\). Còn nếu cặp \((\sigma(i), \sigma(j)\)) có số lượng nghịch thế là <b>lẻ</b>, thì phép thế \(\sigma\) được gọi là phép thế lẻ 
+                và ta có được dấu phép thế \(sgn(\sigma) = -1\).</li>
+        </ol>
+        </div>
+    </p>
+    <p class="BodyText">
+        Từ đây, ta áp dụng (i) từ <a href="#defi:1.5"><b>định nghĩa 1.5</b></a> vào lại <a href="#ex:1.4"><b>ví dụ 1.4</b></a> trên để xác định dấu của phép thế ta được: 
+        <ul>
+            <li>Với \(\sigma(1) = 5\), \(\sigma(2) = 1\), thỏa mãn <b>1</b> của <a href="#defi:1.5"><b>định nghĩa 1.5</b></a> là \(\sigma(i) > \sigma(j)\), nên ta có được 
+                một cặp nghịch thế đầu tiên là \((5,1)\).</li>
+            <li>Tiếp tục, với \(\sigma(2) = 1\), \(\sigma(3) = 4\), không thỏa mãn <b>1</b> của <a href="#defi:1.5"><b>định nghĩa 1.5</b></a> là \(\sigma(i) > \sigma(j)\), nên \((1,4)\) 
+                không phải là một cặp nghịch thế. </li>
+        </ul>
+    </p>
+    <p class="BodyText">
+        Ta xét tương tự và có được một tập các cặp nghịch thế từ \(\sigma_{6}\) trên như sau: 
+        $$
+        (\sigma(i), \sigma(j)) = \{(5,1), (5,4) , (5,2), (5,3), (4,2), (4,3)\}
+        $$
+    </p>
+    <p class="BodyText">
+        Vì cặp \((\sigma(i), \sigma(j)\)) có số lượng nghịch thế là chẵn, nên theo <b>2</b> của <a href="#defi:1.5"><b>định nghĩa 1.5</b></a>, phép thế 
+        \(\sigma_6\) là phép thế chẵn, có dấu của phép thế là \(sgn(\sigma_6) = 1\). 
+    </p>
+    <!-- footnote 2.0 -->
+    <div>
+        <ol>
+            <li id="author1">Nha Trang.<a href="#footnote-1-ref">&#8617;</a></li>
+        </ol>
+    </div>
     <!-- Footer -->
     <footer>
         <div class="footerNav">
