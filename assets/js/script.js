@@ -1,7 +1,7 @@
       // Danh sách các đường dẫn ảnh của bạn
       const images = [
-        './img/Andrew Wiles.jpg',
-        './img/david foster wallace.jpg',
+        './img/Leibniz.jpg',
+        './img/manga.jpg',
       ];
 
       let currentIndex = 0;
