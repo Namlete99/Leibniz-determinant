@@ -92,6 +92,22 @@ body{
     column-count: 1;
 }
 
+/* Định nghĩa (definition) */
+
+.definition{
+display: block;
+font-style:normal;
+}
+.definition:before {
+content: "Định nghĩa "attr(number)".";
+font-weight: bold;
+font-style: normal;
+}
+.definition[text]:before {
+content: "Định nghĩa "attr(number)" (" attr(text) "). ";
+}
+
+
 /* Link */
 a {
     text-decoration: none;
