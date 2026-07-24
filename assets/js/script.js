@@ -74,3 +74,47 @@
       let img = document.getElementById("myImage");
         img.style.width = (img.clientWidth - 50) + "px"; // Reduces width by 50px
       }
+
+    // dark/light mode
+
+    const btn = document.querySelector(".btn-toggle");
+    const currentTheme = localStorage.getItem("theme");
+
+    // nếu chế độ được lưu trong localStorage là "dark"
+    if (currentTheme == "dark") {
+      // thì sẽ dùng .dark-theme class
+      document.body.classList.add("dark-theme");
+    }
+
+    btn.addEventListener("click", function() {
+      // Toggle class .dark-theme mỗi lần click
+      document.body.classList.toggle("dark-theme");
+      
+      let theme = "light";
+      // Nếu body chứa class .dark-theme
+      if (document.body.classList.contains("dark-theme")) {
+        // thì gán biến theme thành dark
+        theme = "dark";
+      }
+      // lưu lựa chọn vào localStorage
+      localStorage.setItem("theme", theme);
+    });
+
+
+    // nav
+
+    const navBar = document.querySelector("header nav");
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener("scroll", () => {
+      // Check if scrolling down
+      if (window.scrollY > lastScrollY) {
+        navBar.classList.add("nav--hidden");
+      } else {
+        // Scrolling up
+        navBar.classList.remove("nav--hidden");
+      }
+
+      // Update position for next scroll check
+      lastScrollY = window.scrollY;
+    });

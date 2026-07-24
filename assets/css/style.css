@@ -8,12 +8,64 @@
 	font-style: normal;
 }
 
-/* Body */
 
-body{
-    background-color: rgb(40, 38, 35);
-    color: rgb(255, 253, 252);
+/* Body Dark Mode styles*/
+
+body.dark-theme {
+  color: #eee;
+  background: #121212;
+  margin: 0;
+  padding: 0;
 }
+
+/* Nav */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 3rem;
+    margin-bottom: 50px;
+}
+
+header nav {
+    position: fixed;
+    display: flex;
+    justify-content: right;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    background-color:rgb(28, 26, 23);
+    transition: transform 0.3s ease-in-out; /* Animates the hiding action */
+    z-index: 1000;
+}
+
+/* This class gets added via JavaScript when scrolling down */
+nav--hidden {
+  transform: translateY(-100%);
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+  padding-top: 1rem;
+  padding-right: 5rem;
+  color: #eeeeee;
+}
+
+header ul li a{
+    color: rgb(62, 177, 198); 
+    text-decoration: none;
+    opacity: 0.6;
+    transition: 0.5s;
+}
+header ul li a:hover{
+    opacity: 3;
+    color:#eeeeee;
+}
+
 
 /* Tiêu đề LaTeX */
 
@@ -249,6 +301,57 @@ li {
     margin-top: 30px;
     text-align: justify;
     margin-bottom: 10px;
+}
+
+
+/* Bibliography */
+
+.bib{
+
+}
+
+.bib-title{
+    font-weight:800;
+    font-size: 29px;
+    text-align: Left;
+    margin-top: 13px;
+    margin-bottom: 20px;
+}
+
+.bib-list {
+    list-style-type: none; /* Removes the dots */
+    padding: 0;
+    margin: 0;
+}
+
+.bib-item{
+    display: table;
+    table-layout: fixed;
+    list-style-type: none;
+    width: 100%;
+    padding-bottom: 0.75em;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.bib-ref{
+    font-family: 900;
+    font-size: 23px;
+    width: 70px;
+    padding-left: 10px;
+    display: inline-block;
+    display: table-cell;
+    position: relative;
+    text-align: left;
+    vertical-align: text-top;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+.bib-entry{
+    font-family: 400;
+    font-size: 23px;
+    line-height: 125%;
 }
 
 /* Mathjax */
