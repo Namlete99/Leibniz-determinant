@@ -358,6 +358,12 @@ li {
   max-width: 100%;
 }
 
+[id^="eq-"], 
+[id] { 
+    /* Đặt giá trị bằng chiều cao Nav (85px) + khoảng hở mong muốn (ví dụ 15px) */
+    scroll-margin-top: 100px; 
+}
+
 /* Chia đoạn */
 
 hr{
